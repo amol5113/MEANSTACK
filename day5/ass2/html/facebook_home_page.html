@@ -1,0 +1,121 @@
+<Doctype !HTML>
+    <html>
+
+    <head>
+        <script src="../javascript/sample.js"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous">
+
+        <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    </head>
+
+    <body>
+        <div class="row bg-dark text-light " style="height: 60px; position: sticky; top:0; z-index:100">
+            <div class="col-12  d-flex justify-content-between align-items-center ">
+                <div class="">cdac</div>
+                <div class=""><button class="btn btn-outline-danger m-2">log-out</button></div>
+            </div>
+        </div>
+        <div class="row " style="height: 90%;">
+            <div id="parent-first" class="col-2 bg-secondary text-center ">
+
+            </div>
+            <div id="parent" class="col-8 bg-primary text-center">
+                <div id="p-c1" class="row p-2 rounded bg-darks">
+                    <div id="p-c1-c1" class="col-6 bg-secondary text-light p-2 rounded" style="">
+                        <input type="text" id="text-box" placeholder="hey write something here..." class="form-control-lg col-12 m-2">
+                    </div>
+                    
+                    <div id="p-c1-c2" class="col-2 bg-secondary text-light p-3 rounded" style="">
+                        <button onclick="addElementUsingJQuery()" class="btn btn-dark m-2 " style="">
+                        POST HERE</button>
+                    </div>
+                    
+                    <div id="p-c1-c3" class="col-2 bg-secondary text-light p-3 rounded" style="">
+                        <label class="bg-warning rounded p-2 m-1 mt-2 ml-1">
+                       Upload Image
+                            <input multiple type="file" onchange="uploadImage()" id="fileId1" class="form-control-l" style="display: none">
+                    </label>
+                    </div>
+
+                    <div id="p-c1-c4" class="col-2 bg-secondary text-light p-3 rounded" style="">
+                        <label class="bg-danger rounded p-2 m-1 mt-2 ml-1">
+                       Upload Video
+                            <input multiple type="file" onchange="uploadVideo()" id="fileId2" class="form-control-l " style="display: none">
+                    </label>
+                    </div>
+                </div>
+                
+                <div id="p-c2" class="row m-2" style="margin: 2px;">
+                    <div id="p-c2-c1" class="col-12 bg-dark text-light rounded " style="height: 245px; margin: 2px;">
+                        <img src="../image/justdoit.jpg" style="width: 200px; height: 200px;">
+              <div class="row mt-1 w-100">
+                            <div class="col-4">
+                                <button onclick="likeHere(this)" class="btn btn-danger btn-block" style="cursor: pointer"> 
+                                    <i class="far fa-thumbs-up" style="font-size:x-large;"></i>
+                                    <span id="like">0</span>
+                                </button>
+                            </div>
+    
+                            <div class="col-4">
+                                <button onclick="likeHere(this)" class="btn btn-danger btn-block" style="cursor: pointer"> 
+                                    <i class="far fa-thumbs-down" style="font-size:x-large;"></i>
+                                    <span id="dislike">0</span></button>
+                            </div>
+
+                            <div class="col-4">
+                                <button onclick="likeHere(this)" class="btn btn-danger btn-block" style="cursor: pointer"> 
+                                    <i class="far fa-bell" style="font-size:x-large;"></i>
+                                    <span id="subs">0</span></button>
+                            </div>
+                </div>
+                    
+                </div>
+
+                <div id="p-c3" class="row m-2" style="margin: 2px;">
+                    <div id="p-c3-c1" class="col-12 bg-dark text-light rounded " style="height: 200px; margin: 2px;">
+                        <video id="p-c3-c1-c1" style="height: 100%; width: 100%;" controls>
+                            <source id="p-c3-c1-c1-c1" src="../video/SampleVideo_1280x720_1mb.mp4" />
+                        </video>
+                        <div class="row mt-1 w-100">
+                            <div class="col-4">
+                                <button onclick="likeHere(this)" class="btn btn-danger btn-block" style="cursor: pointer"> 
+                                    <i class="far fa-thumbs-up" style="font-size:x-large;"></i>
+                                    <span id="like">0</span>
+                                </button>
+                            </div>
+                            
+                            <div class="col-4">
+                                <button  onclick="likeHere(this)" class="btn btn-danger btn-block" style="cursor: pointer"> 
+                                    <i class="far fa-thumbs-down" style="font-size:x-large;"></i>
+                                    <span id="dislike">0</span></button>
+                            </div>
+                            
+                            <div class="col-4">
+                                <button onclick="likeHere(this)" class="btn btn-danger btn-block" style="cursor: pointer"> 
+                                    <i class="far fa-bell" style="font-size:x-large;"></i>
+                                    <span id="subs">0</span></button>
+                            </div>
+                </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-2 bg-secondary text-center ">
+
+            </div>
+
+        </div>
+
+
+
+        <!--<div class="row bg-secondary   background-image:  linear-gradient(orange,green);">
+           <div class="col-md-12 d-flex justify-content-center">
+                gawade
+          </div>
+        </div>-->
+    </body>
+
+    </html>
