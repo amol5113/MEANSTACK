@@ -1,0 +1,90 @@
+body{
+    margin: 0px;
+    color: white; 
+}
+header-right{
+    display: flex;
+    flex: auto; 
+
+}
+ .header-ele{
+    margin: 5px;
+    margin-top: 8px;
+    margin-right: 10px;
+ }
+h2{
+    text-align: center;
+    margin-top: 10%;
+
+}
+
+#google-name{
+    margin-bottom: 10px;
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
+#google-text-field{
+    align-items: center;
+    width: 150mm;
+    height: 11mm;
+    border-radius: 10px;
+}
+
+#search-form{
+    margin-bottom: 13px;
+}
+
+input[type=search] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid black;
+  border-radius: 10px;
+
+}
+.make-center{   
+
+}
+
+#google-text-field:hover{
+     background: burlywood !important;
+     color: blue;
+     font-size: large;
+     
+}
+
+.buttons{
+    width: 33%;
+    height: 38px;
+    border-radius: 5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+#main {
+    
+    margin-left: 29%; 
+    width: max-content;
+    border-radius: 50px;
+    
+}
+
+#main div {
+  -webkit-flex: 0 0 50px; /* Safari 6.1+ */
+  flex: 0 0 50px;
+}
+#lang-word{
+    margin-left: 27%;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-size: 1rem;
+
+}
+
+#lang-word a{
+    margin-right: 4px;
+    font-size: 0.8rem;
+
+}

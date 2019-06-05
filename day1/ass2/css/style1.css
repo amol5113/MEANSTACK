@@ -1,0 +1,20 @@
+body{
+    
+    background-color: rebeccapurple;
+    color: white; 
+}
+
+
+.make-center{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: royalblue;
+
+}
+div:hover{
+     background: crimson !important;
+     color: red;
+     
+}

@@ -1,0 +1,15 @@
+body{
+    
+    background-color: peru;
+    color: white; 
+}
+
+
+.make-center{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: royalblue;
+
+}

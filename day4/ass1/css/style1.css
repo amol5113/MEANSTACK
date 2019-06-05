@@ -1,0 +1,102 @@
+body{
+    background-color: white;
+    margin: 0px;
+    cursor: pointer;
+}
+#base1{
+    height: 16%;
+    background-color: #067b35;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0px;
+    align-items: center;
+    color: white; 
+
+}
+#base1-child1{
+    padding-right: 30px;
+    font-size: 1.3rem;
+    font-family: cursive;
+    font-size: 2.4rem;
+
+}
+#base1-child2{
+    
+}
+#login-button{
+       background-color: brown;
+       width: 20mm;
+       height: 6.2mm;
+       border-radius: 5px;
+       justify-content: center;
+       align-items: center; 
+       font-size: 1.3rem;
+       padding-right: 1px;
+       padding-left: 20px;
+       border: 1.5px solid white;
+       margin-right: 10px;
+
+}
+#parent{
+    display: flex;
+    justify-content: 1;
+
+}
+#base2-child1{
+    flex: 1;
+    background-color: chocolate;
+}
+#base2-child2{
+    flex: 2;
+    background-color: lightgrey;
+    overflow: auto;
+}
+#add-element{
+       width: 28mm;
+       height: 10mm;
+       border-radius: 5px;
+       justify-content: center;
+       align-items: center; 
+       background-color: blue;
+       color: white;
+       font-size: 1.3rem;
+       padding-top: 10px;
+       text-align: center;
+       border: 1.5px solid white;
+       margin-right: 10px;
+
+
+}
+#text-box{ 
+    border-radius: 5px; 
+    background-color: black; 
+    color: white;
+    font-size: 1.2rem;
+    margin: 5px;
+     
+}
+#base2-child3{
+    flex: 1;
+    background-color: chocolate;
+    overflow: auto;
+}
+#data-container{
+    height: 120px;
+    background-color: #171414;
+    margin: 3px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family:  cursive;
+    font-size: 1.5rem;
+    color: white;
+    font-style: oblique;
+
+}
+
+#base2{
+    height: 90%;
+    background-color: white;
+
+}

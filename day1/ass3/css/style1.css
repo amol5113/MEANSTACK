@@ -1,0 +1,18 @@
+body{
+    background-color: rebeccapurple;
+    color: white; 
+
+}
+
+.make-center{
+    display: flex;
+    justify-content: center;        /*justify-content: flex-start|flex-end|center|space-between|space-around|initial|inherit;*/
+    align-items: center;
+    background-color: royalblue;
+
+}
+
+div:hover{
+     background: black !important;
+     color: white;
+     }

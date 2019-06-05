@@ -1,0 +1,41 @@
+body{
+    background-color: lightblue;
+    color: white; 
+    margin: 0px;
+}
+#base1{
+    height: 50%;
+}
+#parent{
+    display: flex;
+    justify-content: 1;
+
+}
+#child1{
+    flex: 1;
+    background-color: orange;
+}
+#child2{
+flex: 2;
+    background-color: white;
+    overflow: auto;
+}
+#child2 div{
+    background-color: white;
+    height: 50mm;
+    margin-bottom: 2px;
+    
+
+}
+#child3{
+flex: 1;
+    background-color: green;
+    
+}
+
+
+#base2{
+    height: 50%;
+    background-color: blue;
+     
+}

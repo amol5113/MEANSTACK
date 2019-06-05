@@ -1,0 +1,93 @@
+body{
+    background-color: white;
+    margin: 0px;
+}
+#base1{
+    height: 16%;
+    background-color: #3b5998;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 0px;
+    align-items: center;
+    color: white; 
+
+}
+#base1-child1{
+    padding-right: 30px;
+    font-size: 1.3rem;
+    font-family: cursive;
+    font-size: 2.4rem;
+
+}
+#base1-child2{
+    margin-right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#login-button{
+       background-color: royalblue;
+       width: 12mm;
+       height: 4.2mm;
+       justify-content: center;
+       align-items: center; 
+       margin: 10px; 
+       padding: 2px;
+       padding-left: 4px;
+       padding-bottom: 3px;
+       margin-right: 10px;
+       border: 1.5px solid white;
+      
+}
+#parent{
+    display: flex;
+    justify-content: 1;
+
+}
+#base2-child1{
+    flex: 2;
+    background-color: white;
+}
+#base2-child2{
+    flex: 1.5;
+    background-color: lightgrey;
+    overflow: auto;
+}
+
+#base2-child1-facebook-img{
+    width: 100%;
+    height: 100%;
+    background: url("../image/facebook-img-1.png");
+    background-color: whitesmoke;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 0%;
+    
+}
+#base2{
+    height: 90%;
+    background-color: white;
+
+}
+.reg-text-field{
+    height: 35px;
+    width: 10cm;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: whitesmoke;
+
+}
+#submit-btn{
+    width: 4.5cm;
+    height: 25px;
+    background-color: #4da04d;
+    color: white;
+    font-family: auto;
+    font-weight: bold;
+    text-align: -webkit-center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-radius: 5px;
+    
+}
+}
