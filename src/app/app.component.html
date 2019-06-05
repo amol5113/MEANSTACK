@@ -1,0 +1,190 @@
+<div class="container-fluid">
+  <!--NAVIGATION BAR -->
+  <div class="row bg-dark" style="height: 60px;">
+    <!-- PAGE HEADER-->
+    <div class=" col-3 text-light d-flex align-items-center " style="font-family: cursive;
+       font-size: 1.5rem;">
+      {{title}}
+    </div>
+  </div>
+  <!--INPUT BLOCK-->
+  <div class="row btn-style" style="font-style: oblique;">
+    <div class="d-none col-md-3 d-md-block "></div>
+    <!--CENTER BLOCK-->
+    <div class="col-md-6 col-12 alert-secondary mt-1">
+      <!--CARD FOR INPUT-->
+      <div class="card m-1">
+        <div class="card-header" style="color: red;">
+          Create Post
+        </div>
+
+        <div class="card-body">
+          <textarea [(ngModel)]="post.postValue" class="form-control"
+            style="font-family: 'Times New Roman', Times, serif; font-style: italic; font-size: 1.3rem; color: green;"
+            cols="100" rows="2" placeholder="post something....."></textarea>
+
+        </div>
+        <div class="card-footer pb-1">
+          <label class="badge badge-success m-1 p-2 " (click)="postText()">TEXT</label>
+                                        <!--$event represents entire element-->
+          <label class="badge badge-info m-1 p-2 " (change)="postImage($event)">
+            <input  type="file" style="display: none">IMAGE
+          </label>
+          <label class="badge badge-primary m-1 p-2 " (change)=postVideo($event)>
+            <input type="file" style="display: none">VIDEO
+          </label>
+
+        </div>
+
+      </div>
+
+      <div class="d-none col-md-3 d-md-block "></div>
+    </div>
+  
+  </div>
+
+  <!--MAIN SECTION CONTAINER-->
+    <div class="row">
+      <div class="d-none col-md-3 d-md-block"></div>
+
+    <!--PARENT SECTION FOR BLOCK-->
+    <div class="col-md-6 col-12 alert-secondary p-1">
+      <!--FOR LOOP FOR ITEM (ITEM REPRESENT EACH INDIDUAL ELEMENT OF POST OBJECT)-->
+      <ng-container *ngFor="let item of postList; let itemIndex = index;" >
+      <!--TEXT CARD-->
+        <div *ngIf="item.postType == 'TEXT' " class="card">
+          <div class="card-header btn-style">Text Block Reference</div>
+          <!--posting text-->
+          <div class="card-body pb-0">
+            <div class="beautify make-center" style="height: 150px;">
+             {{item.postValue}}
+            </div>
+            <!--like,comment,subscribe,delete,update count shown-->
+            <div class="d-flex justify-content-between text-muted p-1"
+              style="font-size: 0.8rem;padding-bottom: 1px;margin-bottom: 0px;">
+              <span>{{item.likeCount}}+ veer prasoon and more</span>
+              <span>{{item.commentCount}}+ veer prasoon and more</span>
+              <span>{{item.subscribeCount}}+ veer prasoon and more</span>
+            </div>
+          </div>
+  
+          <div class="card-footer d-flex justify-content-between md-1 btn-style">
+            <!--like,comment,subscribe,delete,update -->
+            <div>
+              <label (click)="likeCount(item)" class="badge badge-success p-2 m-1">like</label>
+              <label  (click)="commentCount(item)" class="badge badge-info p-2 m-1">comment</label>
+              <label  (click)="subsCount(item)" class="badge badge-primary p-2 m-1">subscribe</label>
+            </div>
+            <div>
+              <label class="badge badge-dark p-2 m-1">update</label>
+              <label (click)="deletePost(itemIndex)" class="badge badge-danger p-2 m-1">delete</label>
+            </div>
+          </div>
+          <div class="card-footer">
+            <div>
+              <input [(ngModel)]="comment" type="text" class="col-8">
+              <button class="col-2" (click)="addComment(item)">comment</button>
+            </div>
+            <div>
+              <button class="col-2" (click)="getcmt(item)">get comment</button>
+            </div>
+            <div>{{item.commentList}}</div>
+          </div>
+        </div>
+      <!--IMAGE CARD-->
+        <div *ngIf="item.postType == 'IMAGE' " class="card">
+          <div class="card-header btn-style">Image Block Reference</div>
+  
+          <div class="card-body pb-0">
+            <!--posting image-->
+            <div class=" make-center" style="height: 250px;">
+              <img [src]="item.postValue" alt="jellyfish"
+                style="height: 100%; width: 100%; object-fit: contain;" />
+            </div>
+            <!--like,comment,subscribe,delete,update count shown-->
+            <div class="d-flex justify-content-between text-muted p-1"
+              style="font-size: 0.8rem;padding-bottom: 1px;margin-bottom: 0px;">
+              <span>{{item.likeCount}} veer prasoon and more</span>
+              <span>{{item.commentCount}} veer prasoon and more</span>
+              <span>{{item.subscribeCount}} veer prasoon and more</span>
+            </div>
+          </div>
+  
+          <div class="card-footer d-flex justify-content-between md-1 btn-style">
+            <!--like,comment,subscribe,delete,update -->
+            <div>
+              <label (click)="likeCount(item)" class="badge badge-success p-2 m-1">like</label>
+              <label (click)="commentCount(item)" class="badge badge-info p-2 m-1">comment</label>
+              <label (click)="subsCount(item)" class="badge badge-primary p-2 m-1">subscribe</label>
+            </div>
+            <div>
+              <label class="badge badge-dark p-2 m-1">update</label>
+              <label (click)="deletePost(itemIndex)" class="badge badge-danger p-2 m-1">delete</label>
+            </div>
+          </div>
+        </div>
+  
+      <!--VIDEO CARD-->
+        <div *ngIf="item.postType == 'VIDEO' " class="card">
+          <div class="card-header btn-style">Image BLock Reference</div>
+  
+          <div class="card-body pb-0">
+            <!--posting VIDEO-->
+            <div class=" make-center" style="height: 350px;">
+              <video style="height: 100%; width: 100%;" controls>
+                <source [src]="item.postValue">
+              </video>
+            </div>
+            <!--like,comment,subscribe,delete,update count shown-->
+            <div class="d-flex justify-content-between text-muted p-1"
+              style="font-size: 0.8rem;padding-bottom: 1px;margin-bottom: 0px;">
+              <span>{{item.likeCount}} veer prasoon and more</span>
+              <span>{{item.commentCount}} veer prasoon and more</span>
+              <span>{{item.subscribeCount}} veer prasoon and more</span>
+            </div>
+          </div>
+  
+          <div class="card-footer d-flex justify-content-between md-1 btn-style">
+            <!--like,comment,subscribe,delete,update -->
+            <div>
+              <label (click)="likeCount(item)" class="badge badge-success p-2 m-1">like</label>
+              <label (click)="commentCount(item)" class="badge badge-info p-2 m-1">comment</label>
+              <label (click)="subsCount(item)" class="badge badge-primary p-2 m-1">subscribe</label>
+            </div>
+            <div>
+              <label class="badge badge-dark p-2 m-1">update</label>
+              <label (click)="deletePost(itemIndex)" class="badge badge-danger p-2 m-1">delete</label>
+            </div>
+          </div>
+        </div>
+           
+      </ng-container>
+
+  <!--NO POST AVAILABLE-->
+  <div class="card" *ngIf="postList.length == 0">
+      <div class="card-header btn-style">Post Something</div>
+      <!--posting text-->
+      <div class="card-body pb-0">
+        <div class="beautify make-center" style="height: 250px;">
+         <img src="../assets/hellofriend.gif" style="height: 100%;width: 100%; object-fit: contain;">          
+        </div>
+        <!--like,comment,subscribe,delete,update count shown-->
+        
+      </div>
+
+      <div class="card-footer md-1 btn-style">
+        <!--like,comment,subscribe,delete,update -->
+        <div class="row d-flex justify-content-between align-items-center" style="width: 100%">
+        <div class="col-8"></div>
+        <div class="col-4" style="color: red; font-family: 'Times New Roman', Times, serif;">- Amol Gawade</div>
+      </div>
+    </div>
+
+      
+    </div>
+    </div>
+
+  <div class="d-none col-md-3 d-md-block"></div>
+
+    </div>
+</div> 

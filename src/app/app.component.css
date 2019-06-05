@@ -1,0 +1,18 @@
+.beautify{
+    font-family: cursive;
+    font-size: 2rem;
+    letter-spacing: 1.5px;
+    color: green;
+}
+
+.btn-style{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+    font-style: italic;
+
+}
+.make-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
